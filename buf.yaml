@@ -1,0 +1,39 @@
+# Worksapce local [ debe ser la raiz del repositorio ]
+version: v2
+
+# modules donde especificamos la ruta de los archivos .proto
+modules:
+  - path: proto/common
+  - path: proto/user
+  - path: proto/billing
+
+# Dependencias compartidas por todos los módulos del espacio de trabajo.
+# Deben ser módulos alojados en el Registro de Esquemas Buf.
+# La resolución de estas dependencias se almacena en el archivo buf.lock.
+deps:
+  - buf.build/googleapis/googleapis
+
+# Un módulo puede tener su propia configuración de lint y de ruptura,
+# que anula la configuración predeterminada.
+lint:
+  use:
+    - STANDARD
+
+  # Elimina reglas o categorías de la lista [use].
+  except:
+    # La ruta del directorio de un archivo debe coincidir con el nombre de su paquete.
+    # aqui le dice al lint que no es necesario que la ruta de los pkg coincidan
+    # con el nombre de su pkg. [se excluye esta regla]
+    - PACKAGE_DIRECTORY_MATCH
+
+breaking:
+  use:
+    # Detecta cambios que mueven el código generado entre archivos,
+    # lo que provoca errores en el código fuente generado para cada archivo.
+    # Esto provoca errores en los fragmentos de código generados en algunos lenguajes
+    - FILE
+
+#
+#
+#
+# end of file

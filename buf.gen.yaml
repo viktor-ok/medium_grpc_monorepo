@@ -1,0 +1,49 @@
+# Worksapce buf.gen local [ debe ser la raiz del repositorio ]
+version: v2
+
+# esta config se aplica a todo el proyecto
+# ya que solo trabajamos con el lenguaje Go
+# desde aqui se especifacan los plugins remotos que se usan
+# para generar codigo [protobuf] y [grpc]
+
+plugins:
+  # Genera tipos Go para mensajes y enumeraciones.
+  - remote: buf.build/protocolbuffers/go
+
+    # directorio donde se genera el codigo [protobuf]
+    out: gen
+
+    opt:
+      # este import genera el codigo [protobuf] para archivos .proto
+      # en la ruta de go_package especificada en cada archivo .proto
+      - paths=import
+
+      # indica protoc-gen-go que se elimine el prefijo [acme/gen]
+      # al escribir la salida en el disco.
+      # Sin esto, el generador produciría rutas anidadas como [gen/acme/gen/userv1],
+      # lo que luego lleva a importaciones con doble prefijo engorrosas en su código Go.
+      - module=acme/gen
+
+  # -------------------------
+
+  # Genera stubs de cliente/servidor gRPC para Go.
+  - remote: buf.build/grpc/go
+
+    # directorio donde se genera el codigo [grpc]
+    out: gen
+
+    opt:
+      # este import genera el codigo [grpc] para archivos .proto
+      # en la ruta de go_package especificada en cada archivo .proto
+      - paths=import
+
+      # indica protoc-gen-go que se elimine el prefijo [acme/gen]
+      # al escribir la salida en el disco.
+      # Sin esto, el generador produciría rutas anidadas como [gen/acme/gen/userv1],
+      # lo que luego lleva a importaciones con doble prefijo engorrosas en su código Go.
+      - module=acme/gen
+
+#
+#
+#
+# end of file
