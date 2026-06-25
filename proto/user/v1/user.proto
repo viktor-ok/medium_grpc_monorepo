@@ -1,0 +1,20 @@
+syntax = "proto3";
+package user.v1;
+
+import "v1/error.proto";
+
+option go_package = "acme/gen/userv1";
+
+message User {
+  string id = 1;
+  string email = 2;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+  common.v1.ErrorStatus error = 2;
+}

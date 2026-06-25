@@ -1,0 +1,22 @@
+syntax = "proto3";
+package billing.v1;
+
+import "v1/error.proto";
+
+option go_package = "acme/gen/billingv1";
+
+message Invoice {
+  string id = 1;
+  string user_id = 2;
+  int64 amount_cents = 3;
+  string currency = 4;
+}
+
+message GetInvoiceRequest {
+  string id = 1;
+}
+
+message GetInvoiceResponse {
+  Invoice invoice = 1;
+  common.v1.ErrorStatus error = 2;
+}

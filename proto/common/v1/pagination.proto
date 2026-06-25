@@ -1,0 +1,16 @@
+syntax = "proto3";
+package common.v1;
+
+option go_package = "acme/gen/commonv1";
+
+// Generic pagination request.
+message PageRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+// Generic pagination response.
+message PageResponse {
+  string next_page_token = 1;
+  int32 total_size = 2;
+}

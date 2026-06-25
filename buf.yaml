@@ -3,8 +3,8 @@ version: v2
 
 # modules donde especificamos la ruta de los archivos .proto
 modules:
-  - path: proto/common
   - path: proto/user
+  - path: proto/common
   - path: proto/billing
 
 # Dependencias compartidas por todos los módulos del espacio de trabajo.

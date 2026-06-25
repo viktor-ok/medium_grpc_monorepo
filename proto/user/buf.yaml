@@ -1,0 +1,11 @@
+# este archivo el la continuacion del módulo especificado en el archivo
+# buf.yaml de la raíz del repositorio que es una config global
+# donde se hace referencia a todos los módulos del espacio de trabajo.
+# - path: proto/user
+
+# config buf para el módulo user
+version: v2
+
+# campo name es la identidad del registro del módulo si posteriormente se envía al BSR.
+# También limita las comprobaciones de cambios incompatibles a un dominio específico.
+name: buf.build/acme/user
