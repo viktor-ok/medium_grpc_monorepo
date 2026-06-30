@@ -1,4 +1,4 @@
-# Worksapce buf.gen local [ debe ser la raiz del repositorio ]
+# Worksapce buf.gen global [ debe ser la raiz del repositorio ]
 version: v2
 
 # esta config se aplica a todo el proyecto
@@ -8,6 +8,7 @@ version: v2
 
 plugins:
   # Genera tipos Go para mensajes y enumeraciones.
+  # tambien podemos hacer uso de complementos locales de protoc
   - remote: buf.build/protocolbuffers/go
 
     # directorio donde se genera el codigo [protobuf]
@@ -27,6 +28,7 @@ plugins:
   # -------------------------
 
   # Genera stubs de cliente/servidor gRPC para Go.
+  # tambien podemos hacer uso de complementos locales de grpc
   - remote: buf.build/grpc/go
 
     # directorio donde se genera el codigo [grpc]

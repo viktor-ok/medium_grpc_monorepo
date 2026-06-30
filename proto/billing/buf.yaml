@@ -1,4 +1,4 @@
-# este archivo el la continuacion del módulo especificado en el archivo
+# este archivo es la continuacion del módulo especificado en el archivo
 # buf.yaml de la raíz del repositorio que es una config global
 # donde se hace referencia a todos los módulos del espacio de trabajo.
 # - path: proto/billing
