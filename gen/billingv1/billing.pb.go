@@ -227,7 +227,6 @@ var (
 		(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
 	}
 )
-
 var file_v1_billing_proto_depIdxs = []int32{
 	0, // 0: billing.v1.GetInvoiceResponse.invoice:type_name -> billing.v1.Invoice
 	3, // 1: billing.v1.GetInvoiceResponse.error:type_name -> common.v1.ErrorStatus

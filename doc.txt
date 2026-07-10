@@ -1,0 +1,21 @@
+
+Source: https://medium.com/@cassius.paim/hands-on-buf-monorepo-for-go-grpc-a-multi-module-protobuf-architecture-2fd47d16b6a2
+
+### Run test project
+
+  $ buf lint
+
+  $ buf breaking --against .git#branch=main
+
+  $ buf generate
+
+### Cmd golang
+
+  $ go mod tidy
+    * para organizar todas las dependencias
+      de los nuevos archivos generados por protobuf y grpc
+
+  $  go run ./cmd/server
+  $  go run ./cmd/client
+    * ejecutar primero el client
+      seguido del servidor en diferente ventana de la terminal

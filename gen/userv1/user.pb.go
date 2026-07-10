@@ -208,7 +208,6 @@ var (
 		(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
 	}
 )
-
 var file_v1_user_proto_depIdxs = []int32{
 	0, // 0: user.v1.GetUserResponse.user:type_name -> user.v1.User
 	3, // 1: user.v1.GetUserResponse.error:type_name -> common.v1.ErrorStatus
