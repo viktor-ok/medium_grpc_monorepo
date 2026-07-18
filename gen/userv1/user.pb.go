@@ -4,18 +4,15 @@
 // 	protoc        (unknown)
 // source: v1/user.proto
 
-// Package userv1 ...
 package userv1
 
 import (
+	commonv1 "acme/gen/commonv1"
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	commonv1 "acme/gen/commonv1"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -199,15 +196,13 @@ func file_v1_user_proto_rawDescGZIP() []byte {
 	return file_v1_user_proto_rawDescData
 }
 
-var (
-	file_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-	file_v1_user_proto_goTypes  = []any{
-		(*User)(nil),                 // 0: user.v1.User
-		(*GetUserRequest)(nil),       // 1: user.v1.GetUserRequest
-		(*GetUserResponse)(nil),      // 2: user.v1.GetUserResponse
-		(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
-	}
-)
+var file_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_v1_user_proto_goTypes = []any{
+	(*User)(nil),                 // 0: user.v1.User
+	(*GetUserRequest)(nil),       // 1: user.v1.GetUserRequest
+	(*GetUserResponse)(nil),      // 2: user.v1.GetUserResponse
+	(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
+}
 var file_v1_user_proto_depIdxs = []int32{
 	0, // 0: user.v1.GetUserResponse.user:type_name -> user.v1.User
 	3, // 1: user.v1.GetUserResponse.error:type_name -> common.v1.ErrorStatus

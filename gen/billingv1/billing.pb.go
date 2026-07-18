@@ -4,18 +4,15 @@
 // 	protoc        (unknown)
 // source: v1/billing.proto
 
-// Package billingv1 ...
 package billingv1
 
 import (
+	commonv1 "acme/gen/commonv1"
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	commonv1 "acme/gen/commonv1"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -218,15 +215,13 @@ func file_v1_billing_proto_rawDescGZIP() []byte {
 	return file_v1_billing_proto_rawDescData
 }
 
-var (
-	file_v1_billing_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-	file_v1_billing_proto_goTypes  = []any{
-		(*Invoice)(nil),              // 0: billing.v1.Invoice
-		(*GetInvoiceRequest)(nil),    // 1: billing.v1.GetInvoiceRequest
-		(*GetInvoiceResponse)(nil),   // 2: billing.v1.GetInvoiceResponse
-		(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
-	}
-)
+var file_v1_billing_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_v1_billing_proto_goTypes = []any{
+	(*Invoice)(nil),              // 0: billing.v1.Invoice
+	(*GetInvoiceRequest)(nil),    // 1: billing.v1.GetInvoiceRequest
+	(*GetInvoiceResponse)(nil),   // 2: billing.v1.GetInvoiceResponse
+	(*commonv1.ErrorStatus)(nil), // 3: common.v1.ErrorStatus
+}
 var file_v1_billing_proto_depIdxs = []int32{
 	0, // 0: billing.v1.GetInvoiceResponse.invoice:type_name -> billing.v1.Invoice
 	3, // 1: billing.v1.GetInvoiceResponse.error:type_name -> common.v1.ErrorStatus

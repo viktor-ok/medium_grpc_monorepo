@@ -4,16 +4,14 @@
 // 	protoc        (unknown)
 // source: v1/error.proto
 
-// Package commonv1 ...
 package commonv1
 
 import (
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
-
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -97,12 +95,10 @@ func file_v1_error_proto_rawDescGZIP() []byte {
 	return file_v1_error_proto_rawDescData
 }
 
-var (
-	file_v1_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-	file_v1_error_proto_goTypes  = []any{
-		(*ErrorStatus)(nil), // 0: common.v1.ErrorStatus
-	}
-)
+var file_v1_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_v1_error_proto_goTypes = []any{
+	(*ErrorStatus)(nil), // 0: common.v1.ErrorStatus
+}
 var file_v1_error_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
